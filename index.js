@@ -45,13 +45,11 @@
       if (this.x + this.dx > this.width || this.x + this.dx < 0) {
         this.dx = -this.dx;
         indx = Math.floor(Math.random() * 6) + 1;
-        setTimeout(this.players[indx].play, 0);
         flash = true;
       }
       if (this.y + this.dy > this.height || this.y + this.dy < 0) {
         this.dy = -this.dy;
         indx = Math.floor(Math.random() * 6) + 1;
-        setTimeout(this.players[indx].play, 0);
         flash = true;
       }
       this.x += this.dx;

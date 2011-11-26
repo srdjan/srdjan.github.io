@@ -10,7 +10,6 @@ class Canvas
 			@ctx.fillStyle = "red"
 		else
 			@ctx.fillStyle = "blue"
-
 		@ctx.fill()
 
 class PaddleGame extends Canvas
@@ -26,13 +25,13 @@ class PaddleGame extends Canvas
 		if (@x + @dx > @width || @x + @dx < 0)
 			@dx = -@dx
 			indx = Math.floor(Math.random() * 6) + 1
-			setTimeout(@players[indx].play, 0)
+	#		setTimeout(@players[indx].play, 0)
 			flash = true
 
 		if (@y + @dy > @height || @y + @dy < 0)
 			@dy = -@dy
 			indx = Math.floor(Math.random() * 6) + 1
-			setTimeout(@players[indx].play, 0)
+		#	setTimeout(@players[indx].play, 0)
 			flash = true
 
 		@x += @dx
