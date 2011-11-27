@@ -6,11 +6,11 @@ body {
 }
 
 #content {
-  padding: 40px 210px 10px 210px;
+  padding: 10px 210px 10px 210px;
 }
 
 #canvas { 
-  /*border: 1px solid #eee; */
+  border: 1px solid #eee; 
 }
 
 h1 {
@@ -21,30 +21,25 @@ h1 {
   background: #0066FF;
   color: white;
   display: inline-block;
-  padding: 30px 20px;
+  padding: 30px 10px;
   font-size: 2em;
-  opacity: 0;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;
   -webkit-transition: opacity 1s, background-color 200ms;
   -moz-transition: opacity 1s, background-color 200ms;
 }
-
 h1:hover {
-  background: #33CCFF;
+  background: white;
+  color: #0066FF;
 }
-
 h1 a {
   color: inherit;
   font-weight: inherit;
 }
-
 h1 a:hover {
+  color: inherit;
   text-decoration: none;
-}
-
-.onload h1 {
-  opacity: 1;
+  font-weight: bold;
 }
 
 h2 {
@@ -65,16 +60,13 @@ h2 {
   -webkit-transition: opacity 1s, margin-top 200ms, margin-bottom 200ms, margin-left 1s;
   -moz-transition: opacity 1s, margin-top 200ms, margin-bottom 200ms, margin-left 1s;
 }
-
 #tag em {
   font-style: normal
 }
-
 .onload #tag {
   opacity: 1;
   margin-left: 170px;
 }
-
 #tag + p {
   font-size: 22px;
   font-weight: 100;
@@ -86,7 +78,6 @@ a {
   font-weight: bold;
   text-decoration: none;
 }
-
 a:hover {
   color: #003300;
 }
