@@ -67,17 +67,17 @@ class Canvas
 		@ctx.clearRect(0, @height-20, @width, 20)
 
 class Note
-  constructor: (@samplesLength, freq) ->
-    @audio = new Audio()
-    @audio.mozSetup(1, 44100)
-    
-    @samples = new Float32Array(@samplesLength)
-    k = 2 * Math.PI * freq / 44100
-    i = 0
-    while i < @samplesLength
-      @samples[i++] = 0.5 * Math.sin(k * i++)
-
-  #play: => @audio.mozWriteAudio(@samples)
+#  constructor: (@samplesLength, freq) ->
+#    @audio = new Audio()
+#    @audio.mozSetup(1, 44100)
+#    
+#    @samples = new Float32Array(@samplesLength)
+#    k = 2 * Math.PI * freq / 44100
+#    i = 0
+#    while i < @samplesLength
+#      @samples[i++] = 0.5 * Math.sin(k * i++)
+#
+#  play: => @audio.mozWriteAudio(@samples)
 
 $ ->
 	players = [

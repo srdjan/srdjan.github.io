@@ -80,18 +80,7 @@
     return Canvas;
   })();
   Note = (function() {
-    function Note(samplesLength, freq) {
-      var i, k;
-      this.samplesLength = samplesLength;
-      this.audio = new Audio();
-      this.audio.mozSetup(1, 44100);
-      this.samples = new Float32Array(this.samplesLength);
-      k = 2 * Math.PI * freq / 44100;
-      i = 0;
-      while (i < this.samplesLength) {
-        this.samples[i++] = 0.5 * Math.sin(k * i++);
-      }
-    }
+    function Note() {}
     return Note;
   })();
   $(function() {
