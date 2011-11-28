@@ -28,7 +28,7 @@ class Canvas
 			flash = true
 
 		if (@x + @dx < 30)
-			@savedX = @x-20
+			@savedX = @x-30
 			@savedY = @y
 			@dx = -@dx
 			flash = true
@@ -97,7 +97,7 @@ $ ->
 	width = $("#canvas").width()
 	height = $("#canvas").height()
 	ctx.font = "bold 10pt Calibri"
-	ctx.textAlign = "center"
+	ctx.textAlign = "left"
 	ctx.textBaseline = "middle"
 	canvas = new Canvas(ctx, width, height, players)
 	setInterval(canvas.draw, 15)
