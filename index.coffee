@@ -77,7 +77,7 @@ class Note
     while i < @samplesLength
       @samples[i++] = 0.5 * Math.sin(k * i++)
 
-  play: => @audio.mozWriteAudio(@samples)
+  #play: => @audio.mozWriteAudio(@samples)
 
 $ ->
 	players = [

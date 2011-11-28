@@ -83,7 +83,6 @@
     function Note(samplesLength, freq) {
       var i, k;
       this.samplesLength = samplesLength;
-      this.play = __bind(this.play, this);
       this.audio = new Audio();
       this.audio.mozSetup(1, 44100);
       this.samples = new Float32Array(this.samplesLength);
@@ -93,9 +92,6 @@
         this.samples[i++] = 0.5 * Math.sin(k * i++);
       }
     }
-    Note.prototype.play = function() {
-      return this.audio.mozWriteAudio(this.samples);
-    };
     return Note;
   })();
   $(function() {
