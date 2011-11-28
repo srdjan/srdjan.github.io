@@ -49,6 +49,7 @@ h1 a:hover {
 }
 
 h2 {
+  font-size: 1.5em;
   font-weight: 100;
   letter-spacing: 1px;
   border-bottom: 1px solid #eee;
@@ -64,7 +65,7 @@ h2 {
   opacity: 0;
   color: #0066FF;
   font-weight: 100;
-  font-size: 30px;
+  font-size: 24px;
   margin-top: -110px;
   margin-left: 140px;
   margin-bottom: 100px;
@@ -72,17 +73,9 @@ h2 {
   -webkit-transition: opacity 1s, margin-top 200ms, margin-bottom 200ms, margin-left 1s;
   -moz-transition: opacity 1s, margin-top 200ms, margin-bottom 200ms, margin-left 1s;
 }
-#tag em {
-  font-style: normal
-}
 .onload #tag {
   opacity: 1;
   margin-left: 170px;
-}
-#tag + p {
-  font-size: 22px;
-  font-weight: 100;
-  letter-spacing: 1px;
 }
 
 a {
@@ -128,21 +121,4 @@ a.linkopacity:hover img {
                 6px 5px 1px #ccc, 5px 6px 1px #eee,
                 7px 6px 1px #ccc;
 }
-
-@media all and (max-width: 850px) {
-  ul li {
-    width: 100%;
-  }
-}
-
-@media all and (max-width: 600px) {
-  #tag {
-    margin-top: 0;
-    margin-left: 0;
-    margin-bottom: 0;
-  }
   
-  .onload #tag {
-    margin-left: 0;
-  }
-}
