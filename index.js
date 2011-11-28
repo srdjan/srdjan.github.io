@@ -59,7 +59,6 @@
       }
       if (flash) {
         indx = this.x % 7;
-        setTimeout(this.players[indx].player.play, 0);
         this.savedNote = this.players[indx].note;
         setTimeout(this.fillText, 0);
         setTimeout(this.clearText, 500);

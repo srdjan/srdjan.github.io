@@ -47,7 +47,7 @@ class Canvas
 
 		if flash
 			indx = @x % 7 #Math.floor(Math.random() * 6) + 1
-			setTimeout(@players[indx].player.play, 0)
+			#setTimeout(@players[indx].player.play, 0)
 			@savedNote = @players[indx].note
 			setTimeout(@fillText, 0)
 			setTimeout(@clearText, 500)
