@@ -1,22 +1,17 @@
 (function() {
-  var Canvas, Note;
+  var Canvas, Player;
   var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
   Canvas = (function() {
-    function Canvas(ctx, width, height, players) {
+    function Canvas(ctx, width, height, player) {
       this.ctx = ctx;
       this.width = width;
       this.height = height;
-      this.players = players;
-      this.clearText = __bind(this.clearText, this);
-      this.fillText = __bind(this.fillText, this);
+      this.player = player;
       this.draw = __bind(this.draw, this);
       this.x = 150;
       this.y = 150;
       this.dx = 2;
       this.dy = 4;
-      this.savedX = 0;
-      this.savedY = 0;
-      this.savedNote = "";
     }
     Canvas.prototype.circle = function(r, flash) {
       this.ctx.clearRect(20, 20, this.width - 40, this.height - 40);
@@ -33,82 +28,53 @@
     Canvas.prototype.draw = function() {
       var flash, indx;
       flash = false;
-      if (this.x + this.dx > this.width - 40) {
-        this.savedX = this.x + 20;
-        this.savedY = this.y;
+      if ((this.x + this.dx > this.width - 40) || (this.x + this.dx < 30)) {
         this.dx = -this.dx;
         flash = true;
       }
-      if (this.x + this.dx < 30) {
-        this.savedX = this.x - 30;
-        this.savedY = this.y;
-        this.dx = -this.dx;
-        flash = true;
-      }
-      if (this.y + this.dy > this.height - 40) {
-        this.savedX = this.x;
-        this.savedY = this.y + 30;
-        this.dy = -this.dy;
-        flash = true;
-      }
-      if (this.y + this.dy < 30) {
-        this.savedX = this.x;
-        this.savedY = this.y - 20;
+      if ((this.y + this.dy > this.height - 40) || (this.y + this.dy < 30)) {
         this.dy = -this.dy;
         flash = true;
       }
       if (flash) {
-        indx = this.x % 7;
-        this.savedNote = this.players[indx].note;
-        setTimeout(this.fillText, 0);
-        setTimeout(this.clearText, 500);
+        indx = this.x % 6;
+        setTimeout(this.player.play, 0, indx);
       }
       this.x += this.dx;
       this.y += this.dy;
       return this.circle(10, flash);
     };
-    Canvas.prototype.fillText = function() {
-      this.ctx.fillStyle = "blue";
-      return this.ctx.fillText(this.savedNote, this.savedX, this.savedY);
-    };
-    Canvas.prototype.clearText = function() {
-      this.ctx.clearRect(0, 0, 20, this.height);
-      this.ctx.clearRect(0, 0, this.width, 20);
-      this.ctx.clearRect(this.width - 20, 0, 20, this.height);
-      return this.ctx.clearRect(0, this.height - 20, this.width, 20);
-    };
     return Canvas;
   })();
-  Note = (function() {
-    function Note() {}
-    return Note;
+  Player = (function() {
+    function Player() {
+      this.play = __bind(this.play, this);      var data, i, middleC, note, params, waves;
+      middleC = 261.6260;
+      this.notes = [];
+      waves = [];
+      waves[0] = ["sine", 0.0000, 0.1000, 0.0000, 2.0000, 1.0000, 1.0000, 20.0000, middleC, 2400.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 1.0000, 0.0000, 0.0000, 0.0000, 0.0000];
+      waves[1] = ["sine", 0.0000, 0.1000, 0.0000, 2.0000, 1.0000, 1.0000, 20.0000, middleC * 2, 2400.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 1.0000, 0.0000, 0.0000, 0.0000, 0.0000];
+      waves[2] = ["sine", 0.0000, 0.1000, 0.0000, 2.0000, 1.0000, 1.0000, 20.0000, middleC * 3, 2400.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 1.0000, 0.0000, 0.0000, 0.0000, 0.0000];
+      waves[3] = ["sine", 0.0000, 0.1000, 0.0000, 2.0000, 1.0000, 1.0000, 20.0000, middleC * 4, 2400.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 1.0000, 0.0000, 0.0000, 0.0000, 0.0000];
+      waves[4] = ["sine", 0.0000, 0.1000, 0.0000, 2.0000, 1.0000, 1.0000, 20.0000, middleC * 5, 2400.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 1.0000, 0.0000, 0.0000, 0.0000, 0.0000];
+      waves[5] = ["sine", 0.0000, 0.1000, 0.0000, 2.0000, 1.0000, 1.0000, 20.0000, middleC * 6, 2400.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 0.0000, 1.0000, 0.0000, 0.0000, 0.0000, 0.0000];
+      i = 0;
+      while (i < waves.length) {
+        note = {};
+        params = jsfxlib.arrayToParams(waves[i]);
+        data = jsfx.generate(params);
+        note.data = audio.make(data);
+        this.notes.push(note);
+        i++;
+      }
+    }
+    Player.prototype.play = function(i) {
+      return this.notes[i].data.play();
+    };
+    return Player;
   })();
   $(function() {
-    var canvas, ctx, height, players, width;
-    players = [
-      {
-        player: new Note(7050, 440),
-        note: "#A4"
-      }, {
-        player: new Note(7050, 493.883),
-        note: "#B4"
-      }, {
-        player: new Note(7050, 523.26),
-        note: "#C4"
-      }, {
-        player: new Note(7050, 830.61),
-        note: "#G4"
-      }, {
-        player: new Note(7050, 880),
-        note: "#A5"
-      }, {
-        player: new Note(7050, 987.77),
-        note: "#B5"
-      }, {
-        player: new Note(7050, 1046.50),
-        note: "#C6"
-      }
-    ];
+    var canvas, ctx, height, player, width;
     setTimeout($('body').addClass('onload'), 5);
     ctx = $("#canvas")[0].getContext("2d");
     width = $("#canvas").width();
@@ -116,7 +82,8 @@
     ctx.font = "bold 10pt Calibri";
     ctx.textAlign = "left";
     ctx.textBaseline = "middle";
-    canvas = new Canvas(ctx, width, height, players);
+    player = new Player;
+    canvas = new Canvas(ctx, width, height, player);
     return setInterval(canvas.draw, 15);
   });
 }).call(this);
