@@ -29,15 +29,8 @@ h1 {
   -moz-transition: opacity 1s, background-color 200ms;
 }
 h1:hover {
-  background: white;
-  color: #0066FF;
-  text-shadow:  1px 0px 1px #ccc, 0px 1px 1px #eee,
-                2px 1px 1px #ccc, 1px 2px 1px #eee,
-                3px 2px 1px #ccc, 2px 3px 1px #eee,
-                4px 3px 1px #ccc, 3px 4px 1px #eee,
-                5px 4px 1px #ccc, 4px 5px 1px #eee,
-                6px 5px 1px #ccc, 5px 6px 1px #eee,
-                7px 6px 1px #ccc;
+  background: #66CCFF;
+  color: white;
 }
 h1 a {
   color: inherit;
@@ -62,20 +55,16 @@ h2 {
 }
 
 #tag {
-  opacity: 0;
+  opacity: 1;
   color: #0066FF;
   font-weight: 100;
   font-size: 24px;
   margin-top: -110px;
-  margin-left: 120px;
+  margin-left: 150px;
   margin-bottom: 100px;
   letter-spacing: 2px;
   -webkit-transition: opacity 1s, margin-top 200ms, margin-bottom 200ms, margin-left 1s;
   -moz-transition: opacity 1s, margin-top 200ms, margin-bottom 200ms, margin-left 1s;
-}
-.onload #tag {
-  opacity: 1;
-  margin-left: 170px;
 }
 
 a {

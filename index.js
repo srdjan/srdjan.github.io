@@ -1,7 +1,9 @@
 (function() {
   var Canvas, Player;
   var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
+
   Canvas = (function() {
+
     function Canvas(ctx, width, height, player) {
       this.ctx = ctx;
       this.width = width;
@@ -13,6 +15,7 @@
       this.dx = 2;
       this.dy = 4;
     }
+
     Canvas.prototype.circle = function(r, color, x, y) {
       this.ctx.clearRect(0, 0, this.width, this.height);
       this.ctx.beginPath();
@@ -21,6 +24,7 @@
       this.ctx.fillStyle = color;
       return this.ctx.fill();
     };
+
     Canvas.prototype.draw = function() {
       var flash, indx;
       flash = false;
@@ -40,11 +44,16 @@
       }
       return this.circle(10, "blue", this.x, this.y);
     };
+
     return Canvas;
+
   })();
+
   Player = (function() {
+
     function Player() {
-      this.play = __bind(this.play, this);      var data, i, note, params, waves;
+      this.play = __bind(this.play, this);
+      var data, i, note, params, waves;
       this.notes = [];
       waves = [];
       waves[0] = ["square", 0.0000, 0.4000, 0.0000, 0.1160, 0.0000, 0.3020, 110.0000, 472.0000, 2400.0000, -0.7880, 0.0000, 0.0000, 0.0100, 0.0003, 0.0000, 0.0000, 0.0000, 0.5000, -0.1020, 0.0000, 0.0000, 0.0000, 1.0000, 0.0000, 0.0000, 0.0000, 0.0000];
@@ -66,15 +75,18 @@
         i++;
       }
     }
+
     Player.prototype.play = function(i) {
       this.notes[i].data.play();
       return console.log(i);
     };
+
     return Player;
+
   })();
+
   $(function() {
     var canvas, ctx, height, player, width;
-    setTimeout($('body').addClass('onload'), 5);
     ctx = $("#canvas")[0].getContext("2d");
     width = $("#canvas").width();
     height = $("#canvas").height();
@@ -85,4 +97,5 @@
     canvas = new Canvas(ctx, width, height, player);
     return setInterval(canvas.draw, 13);
   });
+
 }).call(this);

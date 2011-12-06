@@ -60,8 +60,6 @@ class Player
 		console.log(i)
 
 $ ->
-	setTimeout($('body').addClass('onload'), 5)
-
 	ctx = $("#canvas")[0].getContext("2d")
 	width = $("#canvas").width()
 	height = $("#canvas").height()
