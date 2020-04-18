@@ -22,7 +22,6 @@ div.container div.content {
 
 a {
   color: #17176d;
-  /* font-weight: bold; */
   text-decoration: none;
 }
 a:hover {
@@ -39,6 +38,6 @@ h2 {
 
 .header {
   font-family: Monospace;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 110%;
 }
