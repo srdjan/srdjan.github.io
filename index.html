@@ -3,12 +3,84 @@
 <html>
   <head>
     <title>Personal Github page</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style type="text/css">
+      html {
+        height: 100%;
+        margin: 0 auto;
+        max-width: 38em;
+      }
+
+      body {
+        font: 1.4rem/1.7 "Helvetica Neue", Helvetica, Arial, sans-serif;
+        margin: 0;
+        color: #2C2C2C;
+        border-top: 15px solid rgb(213, 214, 216);
+      }
+
+      div.container {
+        top: 5rem;
+        height: 30rem;
+        position: relative;
+      }
+
+      div.container div.content {
+        margin: 0;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+      }
+
+      a {
+        color: #2C2C2C;
+        background-image: linear-gradient(120deg, #dfe2f3 0%, #f8fafa 100%);
+        background-repeat: no-repeat;
+        background-size: 100% 0.1em;
+        background-position: 0 88%;
+        transition: background-size 0.25s ease-in;
+      }
+      a:hover {
+        background-size: 100% 88%;
+        cursor: pointer;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 100;
+        letter-spacing: 1px;
+        border-bottom: 1px solid #eee;
+      }  
+
+      .header {
+        font-family: Monospace;
+        font-size: 1.7rem;
+        line-height: 110%;
+      }
+
+      @media only screen 
+        and (min-device-width: 320px) 
+        and (max-device-width: 480px)
+        and (-webkit-min-device-pixel-ratio: 2) {
+          body {
+            font: 2.2rem/1.7 "Helvetica Neue", Helvetica, Arial, sans-serif;
+          }
+          .header {
+            font-size: 2.7rem;
+          }
+          div.container {
+            top: 28rem;    
+          }
+          h2 {
+            font-size: 3rem;
+          }
+      }
+    </style>
   </head>
   <body>
     <div class="container">
       <div class="content">
-        <p class="header">
+        <p>
           Srdjan Strbanovic<br />
           Software Engineer<br />
           NYC Tri-State Area<br />
