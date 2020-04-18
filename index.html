@@ -1,110 +1,100 @@
-
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Personal Github page</title>
+    <title>Personal Github page: Srdjan Strbanovic</title>
     <style type="text/css">
       html {
         height: 100%;
         margin: 0 auto;
-        max-width: 38em;
+        max-width: 42em;
       }
 
       body {
-        font: 1.2rem/1.7 "Helvetica Neue", Helvetica, Arial, sans-serif;
-        margin: 0;
-        color: #2C2C2C;
+        margin: 0; 
+        padding: 0;
         border-top: 15px solid rgb(213, 214, 216);
+        color:rgb(25, 37, 63);
+        text-align: center;
       }
 
-      div.container {
-        top: 5rem;
-        height: 30rem;
+      header {
+        top: 11rem;
+        font-family: Monospace;
+        font-size: 1.55rem;
+        line-height: 110%;
+        margin-top: 3rem;
+      }
+
+      article {
         position: relative;
-      }
-
-      div.container div.content {
-        margin: 0;
-        position: absolute;
-        top: 60%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
+        top: 1rem;
+        left: 6rem;
+        font: 1.1rem/1.7 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        color: rgb(25, 37, 63);
+        border-bottom: #6e6b6b;
+        max-width: 70%;
       }
 
       a {
-        color: #2C2C2C;
-        background-image: linear-gradient(120deg, #dfe2f3 0%, #f8fafa 100%);
+        color:rgb(25, 37, 63);
+        background-image: linear-gradient(120deg, #dadbde 50%, #f8fafa 100%);
         background-repeat: no-repeat;
         background-size: 100% 0.1em;
-        background-position: 0 88%;
+        background-position: 0 98%;
+        text-decoration: none;
         transition: background-size 0.25s ease-in;
       }
       a:hover {
-        background-size: 100% 88%;
+        background-size: 100% 68%;
         cursor: pointer;
       }
 
       h2 {
+        color: rgb(25, 37, 63);
         font-size: 1.5rem;
-        font-weight: 100;
+        font-weight: 200;
         letter-spacing: 1px;
-        border-bottom: 1px solid #eee;
-      }  
-
-      .header {
-        font-family: Monospace;
-        font-size: 1.7rem;
-        line-height: 110%;
+        border-bottom: 1px solid rgb(213, 214, 216);
       }
 
-      @media only screen 
-        and (min-device-width: 320px) 
-        and (max-device-width: 480px)
-        and (-webkit-min-device-pixel-ratio: 2) {
-          body {
-            font: 2.2rem/1.7 "Helvetica Neue", Helvetica, Arial, sans-serif;
-          }
-          .header {
-            font-size: 2.7rem;
-          }
-          div.container {
-            top: 24rem;    
-          }
-          h2 {
-            font-size: 3rem;
-          }
+      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+        header {
+          font-size: 2.7rem;
+        }
+        article {
+          top: 6rem;
+          font: 2rem/1.7 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        h2 {
+          font-size: 3rem;
+        }
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="content">
-        <p>
-          Srdjan Strbanovic<br />
-          Software Engineer<br />
-          NYC Tri-State Area<br />
-        </p>
+    <header>
+      Srdjan Strbanovic<br />
+      Software Engineer<br />
+      NYC Tri-State Area<br />
+    </header>
 
-        <p>
-          <h2>Portals</h2>
-          • <a href="http://github.com/srdjan">@github</a><br />
-          • <a href="http://gotium.com">@blog</a><br />
-          • <a href="https://twitter.com/djidja8">@twitter</a>
-        </p>
+    <article>
+      <h2>Portals</h2>
+      <a href="http://github.com/srdjan">@github ≈</a>
+      <a href="http://gotium.com">@blog ≈</a>
+      <a href="https://twitter.com/djidja8">@twitter</a>
+    </article>
 
-        <p>
-          <h2>Work, now</h2>
-          • Co-Founder & CTO @ <a href="https://klinchit.app">KlinchIt.app</a><br />
-        </p>
+    <article>
+      <h2>Work, now</h2>
+      • Co-Founder & CTO @ <a href="https://klinchit.app">KlinchIt.app</a><br />
+    </article>
 
-        <p>
-          <h2>Work, before</h2>
-          • Chief Architect @ Lifion by ADP<br />
-          • Principal Architect @ ThoughtWorks<br />
-          • CTO  @ Cignium<br />
-        </p>
-      </div>
-    </div>
+    <article>
+      <h2>Work, before</h2>
+      • Chief Architect @ Lifion by ADP<br />
+      • Principal Architect @ ThoughtWorks<br />
+      • CTO @ Cignium<br />
+    </article>
   </body>
 </html>
