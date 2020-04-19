@@ -2,6 +2,8 @@
 <html>
   <head>
     <title>Personal Github page: Srdjan Strbanovic</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
     <style type="text/css">
       html {
         height: 100%;
@@ -12,9 +14,9 @@
       body {
         margin: 0; 
         padding: 0;
-        border-top: 25px solid rgb(213, 214, 216);
         color:rgb(25, 37, 63);
         text-align: center;
+        place-items: center;
       }
 
       header {
@@ -52,6 +54,25 @@
         font: 1.1rem/1.5 "Lucida Console", Monaco, monospace;
       }
 
+      .cards {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        max-width: 800px;
+        height: 3vmin;
+      }
+      .card {
+        -webkit-box-flex: 1;
+        flex: 1 1 0;
+        -webkit-transition: all 400ms ease, background-color 800ms ease;
+        transition: all 400ms ease, background-color 800ms ease;
+      }
+      .card:hover {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+      }
+
       @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
         header {
           font: 1.75rem/1.2 "Lucida Console", Monaco, monospace;
@@ -67,8 +88,22 @@
         }
       }
     </style>
+    <script type="text/javascript" src="cards.js"></script>  
   </head>
-  <body>
+  <body onload="cards();">
+    <div class="cards">
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+      <div class="card"></div>
+    </div>
+
     <header>
       Srdjan Strbanovic<br />
       Software Engineer<br />
