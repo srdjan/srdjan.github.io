@@ -1,4 +1,4 @@
-const cards = function () {
+const init = function () {
   const cards = document.querySelectorAll('.card')
 
   const hsl = (h, s, l) => `hsl(${h}deg, ${s}%, ${l}%)`
@@ -30,10 +30,19 @@ const cards = function () {
       c.style.flexGrow = 1
     })
 
+  // -- execute 
   reset()
   cards.forEach((card, i) =>
     card.addEventListener('mouseover', () => handleHover(card, i))
   )
-
   document.querySelector('.cards').addEventListener('mouseleave', reset)
+
+  setTimeout(() => {
+    cards.forEach((card, i) =>
+      handleHover(card, i)
+    )
+  }, 2000);
+  setTimeout(() => {
+    reset()
+  }, 3000);
 }
