@@ -41,7 +41,7 @@ const init = function () {
   setTimeout(() => {
     let i = random(cards);
     handleHover(cards[i], i * 10)
-  }, 1000);
+  }, 500);
 
   setTimeout(() => {
     reset()
