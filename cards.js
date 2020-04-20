@@ -41,11 +41,11 @@ const init = function () {
   setTimeout(() => {
     let i = random(cards);
     handleHover(cards[i], i * 10)
-  }, 500);
+  }, 300);
 
   setTimeout(() => {
     reset()
   }, 3000);
 }
 
-const random = (cards) => Math.floor(Math.random()*(cards.length)+1);
+const random = (cards) => Math.floor(Math.random()*cards.length);
