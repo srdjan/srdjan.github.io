@@ -39,13 +39,11 @@ const init = function () {
   document.querySelector('.cards').addEventListener('mouseleave', reset)
 
   setTimeout(() => {
-    let i = random(cards);
+    let i = Math.random()%cards.length+1;
     handleHover(cards[i], i * 10)
   }, 300);
 
   setTimeout(() => {
     reset()
-  }, 3000);
+  }, 1500);
 }
-
-const random = (cards) => Math.floor(Math.random()*cards.length);
