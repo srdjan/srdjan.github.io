@@ -32,17 +32,20 @@ const init = function () {
 
   // -- execute 
   reset()
+  
   cards.forEach((card, i) =>
     card.addEventListener('mouseover', () => handleHover(card, i))
   )
   document.querySelector('.cards').addEventListener('mouseleave', reset)
 
   setTimeout(() => {
-    cards.forEach((card, i) =>
-      handleHover(card, i)
-    )
-  }, 2000);
+    let i = random(cards);
+    handleHover(cards[i], i * 10)
+  }, 1000);
+
   setTimeout(() => {
     reset()
   }, 3000);
 }
+
+const random = (cards) => Math.floor(Math.random()*(cards.length)+1);
