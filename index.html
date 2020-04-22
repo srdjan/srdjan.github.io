@@ -2,11 +2,17 @@
 <html>
   <head>
     <title>Personal Github page: Srdjan Strbanovic</title>
-    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-    <meta content="utf-8" http-equiv="encoding">
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
 
     <style type="text/css">
+      * {
+        --fluid-size: var(--min-font-size) * 1px +
+          (var(--max-font-size) - var(--min-font-size)) *
+          ((100vw - 420px) / (1200 - 420));
+      }
+
       html {
         height: 100%;
         margin: 0 auto;
@@ -22,18 +28,33 @@
       }
 
       header {
+        --min-font-size: 18;
+        --max-font-size: 24;
+        font-size: clamp(
+          var(--min-font-size) * 1px,
+          var(--fluid-size),
+          var(--max-font-size) * 1px
+        );
         position: relative;
-        top: 2rem;
-        padding-top: 2rem;;
+        top: 4rem;
+        padding-bottom: 2rem;
       }
 
       article {
+        --min-font-size: 14;
+        --max-font-size: 18;
+        font-size: clamp(
+          var(--min-font-size) * 1px,
+          var(--fluid-size),
+          var(--max-font-size) * 1px
+        );
         color: black;
         position: relative;
         top: 4.5rem;
         left: 4.5rem;
         border-bottom: black;
         max-width: 80%;
+        padding-bottom: 1rem;
       }
       article a {
         text-decoration: none;
@@ -43,33 +64,26 @@
         cursor: pointer;
         text-decoration: underline;
       }
-      
-      .darkmode--activated article, 
-      .darkmode--activated article a, 
-      .darkmode--activated h2, 
+
+      .darkmode--activated article,
+      .darkmode--activated article a,
+      .darkmode--activated h2,
       .darkmode--activated header {
         color: #fff;
       }
 
       h2 {
+        --min-font-size: 14;
+        --max-font-size: 18;
+        font-size: clamp(
+          var(--min-font-size) * 1px,
+          var(--fluid-size),
+          var(--max-font-size) * 1px
+        );
+
         font-weight: 200;
         border-bottom: 1px dashed rgb(213, 214, 216);
         font: 1.1rem/1.5 'Lucida Console', Monaco, monospace;
-      }
-
-      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-        header {
-          font: 2.3rem/1.2 'Lucida Console', Monaco, monospace;
-        }
-        article {
-          margin-top: 6rem;
-          left: 0.1rem;
-          max-width: 100%;
-          font: 1.9rem/1.7 'Lucida Console', Monaco, monospace;
-        }
-        h2 {
-          font: 2.3rem/1.2 'Lucida Console', Monaco, monospace;
-        }
       }
 
       .cards {
@@ -93,23 +107,23 @@
 
       @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
         header {
-          font: 2.3rem/1.2 "Lucida Console", Monaco, monospace;
+          font: 2.3rem/1.2 'Lucida Console', Monaco, monospace;
         }
         article {
           margin-top: 6rem;
           left: 0.1rem;
           max-width: 100%;
-          font: 1.9rem/1.7 "Lucida Console", Monaco, monospace;
+          font: 1.9rem/1.7 'Lucida Console', Monaco, monospace;
         }
         h2 {
-          font: 2.3rem/1.2 "Lucida Console", Monaco, monospace;
+          font: 2.3rem/1.2 'Lucida Console', Monaco, monospace;
         }
         .cards {
           height: 5vmin;
         }
       }
     </style>
-    <script type="text/javascript" src="cards.js"></script>  
+    <script type="text/javascript" src="cards.js"></script>
   </head>
   <body onmouseover="" onload="init();">
     <div class="cards">
@@ -140,14 +154,15 @@
 
     <article>
       <h2>Work, now</h2>
-      • Co-Founder & CTO&emsp;<a href="https://klinchit.app">@ KlinchIt.app</a><br/>
+      • Co-Founder & CTO&emsp;<a href="https://klinchit.app">@ KlinchIt.app</a
+      ><br />
     </article>
 
     <article>
       <h2>Work, before</h2>
-      • Chief Architect&emsp;@Lifion by ADP<br/>
-      • Principal Architect&emsp;@ThoughtWorks<br/>
-      • CTO&emsp;@Cignium<br/>
+      • Chief Architect&emsp;@Lifion by ADP<br />
+      • Principal Architect&emsp;@ThoughtWorks<br />
+      • CTO&emsp;@Cignium<br />
     </article>
 
     <script>
