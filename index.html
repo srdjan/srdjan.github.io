@@ -29,7 +29,7 @@
 
       header {
         --min-font-size: 18;
-        --max-font-size: 24;
+        --max-font-size: 22;
         font-size: clamp(
           var(--min-font-size) * 1px,
           var(--fluid-size),
@@ -41,8 +41,8 @@
       }
 
       article {
-        --min-font-size: 14;
-        --max-font-size: 18;
+        --min-font-size: 16;
+        --max-font-size: 20;
         font-size: clamp(
           var(--min-font-size) * 1px,
           var(--fluid-size),
@@ -73,8 +73,8 @@
       }
 
       h2 {
-        --min-font-size: 14;
-        --max-font-size: 18;
+        --min-font-size: 18;
+        --max-font-size: 22;
         font-size: clamp(
           var(--min-font-size) * 1px,
           var(--fluid-size),
@@ -83,7 +83,6 @@
 
         font-weight: 200;
         border-bottom: 1px dashed rgb(213, 214, 216);
-        font: 1.1rem/1.5 'Lucida Console', Monaco, monospace;
       }
 
       .cards {
@@ -103,24 +102,6 @@
       .card:hover {
         -webkit-transform: scale(1.2);
         transform: scale(1.2);
-      }
-
-      @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-        header {
-          font: 2.3rem/1.2 'Lucida Console', Monaco, monospace;
-        }
-        article {
-          margin-top: 6rem;
-          left: 0.1rem;
-          max-width: 100%;
-          font: 1.9rem/1.7 'Lucida Console', Monaco, monospace;
-        }
-        h2 {
-          font: 2.3rem/1.2 'Lucida Console', Monaco, monospace;
-        }
-        .cards {
-          height: 5vmin;
-        }
       }
     </style>
     <script type="text/javascript" src="cards.js"></script>
@@ -154,7 +135,7 @@
 
     <article>
       <h2>Work, now</h2>
-      • Co-Founder & CTO&emsp;<a href="https://klinchit.app">@ KlinchIt.app</a
+      • Co-Founder & CTO&emsp;<a href="https://klinchit.app">@KlinchIt.app</a
       ><br />
     </article>
 
