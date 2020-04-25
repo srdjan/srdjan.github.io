@@ -8,24 +8,12 @@
     <script type="text/javascript" src="cards.js"></script>
 
     <style type="text/css">
-      * {
-        --fluid-size: var(--min-font-size) * 1px +
-          (var(--max-font-size) - var(--min-font-size)) *
-          ((120vw - 420px) / (1200 - 420));
-      }
-
       html {
         height: 100%;
         margin: 0 auto;
         max-width: 50em;
         font-family: 'Lucida Console', Monaco, monospace;
-        --min-font-size: 18;
-        --max-font-size: 18;
-        font-size: clamp(
-          var(--min-font-size) * 1px,
-          var(--fluid-size),
-          var(--max-font-size) * 1px
-        );
+        font-size: max(1.5 * (1vw + 1vh) / 2, 12px);
       }
 
       body {
