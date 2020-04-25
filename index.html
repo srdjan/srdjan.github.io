@@ -9,9 +9,9 @@
 
     <style type="text/css">
       html {
-        height: 100%;
-        margin: 0 auto;
+        height: 100vh;
         max-width: 50em;
+        margin: 0 auto;
         font-family: 'Lucida Console', Monaco, monospace;
         font-size: max(1.5 * (1vw + 1vh) / 2, 12px);
       }
@@ -55,7 +55,7 @@
         display: flex;
         -webkit-box-pack: center;
         justify-content: center;
-        height: 3vmin;
+        height: 5vmin;
       }
       .card {
         -webkit-box-flex: 1;
@@ -69,7 +69,7 @@
       }
     </style>
   </head>
-  <body onmouseover="" onload="init();">
+  <body onmouseover="" onload="init()">
     <div class="cards">
       <div class="card"></div>
       <div class="card"></div>
@@ -110,7 +110,10 @@
     </article>
 
     <script>
-      new Darkmode().showWidget()
+      new Darkmode({
+        right: '47vw',
+        bottom: '26vmin'
+      }).showWidget()
     </script>
   </body>
 </html>
