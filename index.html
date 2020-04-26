@@ -10,9 +10,8 @@
     <style type="text/css">
       html {
         height: 100vh;
+        width: 100vw;
         margin: 0 auto;
-        font-family: 'Lucida Console', Monaco, monospace;
-        font-size: clamp(1.2rem, 1.31rem, 1.9rem);
       }
 
       body {
@@ -20,6 +19,17 @@
         padding: 0;
         text-align: center;
         place-items: center;
+        font-family: 'Lucida Console', Monaco, monospace;
+      }
+      @media screen and (min-width: 320px) {
+        body {
+          font-size: calc(22px + 6 * ((100vw - 320px) / 680));
+        }
+      }
+      @media screen and (min-width: 1000px) {
+        body {
+          font-size: 20px;
+        }
       }
 
       header {
@@ -30,7 +40,7 @@
       article {
         position: relative;
         color: black;
-        margin: 4.5vw;
+        margin-top: 4.5vw;
       }
       article a {
         text-decoration: none;
