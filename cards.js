@@ -36,7 +36,7 @@ const init = function () {
   cards.forEach((card, i) =>
     card.addEventListener('mouseover', () => handleHover(card, i))
   )
-  document.querySelector('.cards').addEventListener('mouseleave', reset)
+  document.querySelector('nav').addEventListener('mouseleave', reset)
 
   setTimeout(() => {
     let i = Math.random()%cards.length+1;
