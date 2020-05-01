@@ -47,3 +47,5 @@ const init = function () {
     reset()
   }, 1500);
 }
+
+init();
