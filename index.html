@@ -11,10 +11,13 @@
       html { 
         margin: 0 auto;
         font-size: 55%;  
-        width: 65vw;
+        width: 50vw;
       }
       @media only screen and (max-device-width: 480px) {
-	      html { font-size: 100%; }
+	      html { 
+          font-size: 100%; 
+          width: 75vw;
+        }
       }
       
       body {
@@ -24,7 +27,7 @@
         place-items: center;
         font-family: 'Lucida Console', Monaco, monospace;
         font-size: 22px;
-        border-right: 1px dotted rgb(106, 30, 71);
+        border-right: 1px dotted rgb(20, 139, 70);
         border-left: 1px dotted rgb(106, 30, 71);
       }
       @media screen and (min-width: 420px)   {
@@ -35,7 +38,9 @@
         position: relative;
         margin-top: 8vh;
       }
-
+      footer {
+        margin-top: 8vh;
+      }
       article {
         position: relative;
         color: black;
@@ -116,6 +121,7 @@
       • CTO&emsp;<a href="https://www.cignium.com/">@Cignium</a><br/>
     </article>
 
+    <footer>-</footer>
     <script>
       new Darkmode().showWidget()
     </script>
