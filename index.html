@@ -5,7 +5,7 @@
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <meta content="utf-8" http-equiv="encoding" />
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.5/lib/darkmode-js.min.js"></script>
-    <script defer type="text/javascript" src="cards.js"></script>
+    <script defer type="module" src="./cards.js"></script>
 
     <style type="text/css">
       html { 
@@ -30,7 +30,7 @@
         border-right: 1px dotted rgb(20, 139, 70);
         border-left: 1px dotted rgb(106, 30, 71);
       }
-      @media screen and (min-width: 420px)   {
+      @media screen and (min-width: 480px)   {
         body { font-size: 1.9rem; }
       }
  
@@ -61,39 +61,10 @@
       .darkmode--activated header {
         color: #fff;
       }
-
-      nav {
-        display: -webkit-box;
-        display: flex;
-        -webkit-box-pack: center;
-        justify-content: center;
-        height: 2vmin;
-      }
-      .card {
-        -webkit-box-flex: 1;
-        flex: 1 1 0;
-        -webkit-transition: all 400ms ease, background-color 800ms ease;
-        transition: all 400ms ease, background-color 800ms ease;
-      }
-      .card:hover {
-        -webkit-transform: scale(1.2);
-        transform: scale(1.2);
-      }
     </style>
   </head>
   <body onmouseover="">
-    <nav>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-    </nav>
+    <my-header></my-header>
 
     <header>
       <h3>Srdjan Strbanovic</br>
