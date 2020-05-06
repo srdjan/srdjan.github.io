@@ -31,21 +31,12 @@ function MyHeader() {
     const h = i => (i * 360) / cards.length
     const l = i => 100 - ((i + 1) * 100) / cards.length
     const grey = i => hsl(0, 0, l(i))
-    const color = i => hsl(h(i), 100, 50)
-
     
-    const makePalette = i =>
+    const showHeader = (i) =>
       cards.forEach((c, j) => {
-        const color = hsl(h(i + j / cards.length), 100, l(j))
-        c.style.backgroundColor = color
-        if (i !== j) c.style.flexGrow = cards.length / Math.abs(i - j)
-        else c.style.flexGrow = cards.length / 0.6
+        c.style.backgroundColor = hsl(h(i + j / cards.length), 100, l(j))
+        c.style.flexGrow = cards.length / 0.5
       })
-
-    const handleHover = (c, i) => {
-      makePalette(i)
-      c.style.backgroundColor = color(i)
-    }
 
     const reset = () =>
       cards.forEach((c, i) => {
@@ -53,23 +44,14 @@ function MyHeader() {
         c.style.flexGrow = 1
       })
 
-    // -- execute 
-    reset()
-
-    cards.forEach((card, i) => {
-      card.addEventListener('mouseover', () => handleHover(card, i))
-      card.addEventListener('mouseleave', () => reset())
-    })
-
-    setTimeout(() => {
-      let i = Math.random() % cards.length
-      handleHover(cards[i], i * 10)
-    }, 300)
-
-    setTimeout(() => {
-      reset()
-    }, 1500)
-
+      cards.forEach((card, i) => {
+        card.addEventListener('mouseover', () => showHeader(i))
+        card.addEventListener('mouseleave', () => reset())
+      })
+    
+      // -- execute 
+    showHeader(Math.random() % cards.length * 12)
+    setTimeout(() => reset(), 500)
   }, [])
 
 	return html`
