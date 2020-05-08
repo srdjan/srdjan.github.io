@@ -49,8 +49,19 @@ function MyHeader() {
     })
     
     // execute onload: show & and hide the header
-    setTimeout(() => showHeader(Math.random() % cards.length * 12), 10)
-    setTimeout(() => reset(), 1500)
+    let i=1
+    let tm1, tm2
+    setTimeout(function tick() {
+      if(i++ > 3) {
+        return () => {
+          clearTimeout(tm1)
+          clearTimeout(tm2)
+        }
+      }
+      showHeader(Math.random() % cards.length * 12)
+      tm1 = setTimeout(() => reset(), 1500)
+      tm2 = setTimeout(tick, 3500);
+    }, 10)
   }, [])
 
 	return html`
