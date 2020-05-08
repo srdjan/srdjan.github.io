@@ -4,8 +4,9 @@ import html from "https://unpkg.com/atomico/html";
 const styleSheet = `
   footer {
     color: black;
+    font-size: 1rem;  
     margin-top: 10vh;
-    animation: color-me-in 5s 3;
+    animation: color-me-in 10s infinite;
   }
 
   @keyframes color-me-in {
