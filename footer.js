@@ -14,7 +14,7 @@ const styleSheet = `
       color: white;
     }
     100% {
-      color: rgb(106, 30, 71);
+      color: black;
     }
   }
 }`
