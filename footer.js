@@ -6,7 +6,7 @@ const styleSheet = `
     color: black;
     font-size: 1rem;  
     margin-top: 10vh;
-    animation: color-me-in 20s 1;
+    animation: color-me-in 10s 1;
   }
 
   @keyframes color-me-in {
@@ -14,7 +14,7 @@ const styleSheet = `
       color: white;
     }
     100% {
-      color: black;
+      color: rgb(106, 30, 71);
     }
   }
 }`
