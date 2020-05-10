@@ -8,7 +8,7 @@ const init = function () {
   const showHeader = (i) =>
     cards.forEach((c, j) => {
       c.style.backgroundColor = hsl(h(i + j / cards.length), 100, l(j))
-      c.style.flexGrow = cards.length / i===j ? 0.7 : 0.3
+      c.style.flexGrow = i===j ? 0.8 : 0.5
     })
 
   const reset = () =>
@@ -18,13 +18,12 @@ const init = function () {
     })
 
   cards.forEach((card, i) => {
-    card.addEventListener('mouseover', () => showHeader(i))
+    card.addEventListener('mouseover', () => showHeader(Math.random() % i))
     card.addEventListener('mouseleave', () => reset())
   })
   
-  // execute onload: show & and hide the header
-  showHeader(Math.random() % cards.length * 12)
-  setTimeout(() => reset(), 1500)
+  showHeader(Math.random() % cards.length)
+  setTimeout(() => reset(), 2500)
 }  
 
 init()
