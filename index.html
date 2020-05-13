@@ -36,13 +36,31 @@
         color: black;
         margin-top: 4.5vw;
       }
-      article a {
-        text-decoration: none;
-        color: black;
-      }
       article a:hover {
         cursor: pointer;
         text-decoration: underline;
+      }
+
+      a {
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
+        color: inherit;
+        z-index: 1;
+      }
+      a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: .07em;
+        height: .1em;
+        width: 100%;
+        background: linear-gradient(110deg, #e1f549, #29d0be, #6cb8ea, #ff5959);
+        z-index: -1;
+        transition: height .25s cubic-bezier(.6,0,.4,1);
+      }
+      a:hover::after {
+        height: .2em;
       }
       footer {
         margin-top: 10vh;
