@@ -59,10 +59,19 @@
         height: .2em;
       }
       
+      @keyframes pulse {
+        0%, 100% {
+          color: rgb(224, 224, 183);
+        }
+        50% {
+          color: red;
+        }
+      }
       footer {
         margin-top: 10vh;
         line-height: 0.6rem;
-        filter: drop-shadow(0.25rem 0 0.25rem #594848);
+        animation: pulse 4s ease 6s alternate, 
+                   nudge 5s linear 9s alternate;
       }
       nav {
         display: -webkit-box;
