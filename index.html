@@ -11,6 +11,7 @@
       html { 
         margin: 0 auto;
         width: 75vw;
+        heght: 100vh;
       }
 
       body {
@@ -61,19 +62,18 @@
       
       @keyframes pulse {
         0%, 100% {
-          font-style: italic;
           color: black;
         }
         70% {
-          font-style:unset;
-          color: rgb(244, 232, 232);
-          line-height: 0.7rem;
+          font-style: italic;
+          color: rgb(210, 208, 208);
+          line-height: 0.8rem;
         }
       }
       footer {
         margin-top: 10vh;
-        line-height: 0.6rem;
-        animation: pulse 3s ease 1s alternate;
+        line-height: 0.7rem;
+        animation: pulse 3s;
       }
       nav {
         display: -webkit-box;
