@@ -10,8 +10,6 @@
     <style type="text/css">
       html { 
         margin: 0 auto;
-        width: 75vw;
-        heght: 100vh;
       }
 
       body {
@@ -21,8 +19,6 @@
         place-items: center;
         font-family: 'Lucida Console', Monaco, monospace;
         font-size: 1.1rem;  
-        border-right: 2px dotted rgb(20, 139, 70);
-        border-left: 2px dotted rgb(106, 30, 71);
       }   
       @media only screen and (max-width: 480px) {
 	      body { font-size: 75%; }
@@ -50,14 +46,14 @@
         position: absolute;
         left: 0;
         bottom: .07em;
-        height: .1em;
+        height: .05em;
         width: 100%;
-        background: linear-gradient(110deg, #dbddca, #b9d8d5, #b0c3cf, #dfaaaa);
+        background: linear-gradient(270deg, #eaeae7, #d1d2d2, #7f8080, #121111);
         z-index: -1;
         transition: height .25s cubic-bezier(.6,0,.4,1);
       }
       a:hover::after {
-        height: .2em;
+        height: .1em;
       }
       
       @keyframes pulse {
