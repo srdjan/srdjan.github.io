@@ -14,13 +14,16 @@
         font-size: clamp(12px, 2vw, 16px );
       }
       @keyframes pulse {
-        0%, 100% {
-          color: #375B27;
+        0% {
+          color: rgb(138, 133, 133);
         }
-        70% {
+        50% {
           font-style: italic;
           color: #72F94C;
           line-height: 0.8rem;
+        }
+        100% {
+          color: white;
         }
       }
       h3 {
