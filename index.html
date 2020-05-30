@@ -17,25 +17,23 @@
       }
       @keyframes pulse {
         0% {
-          color: rgb(138, 133, 133);
+          color: #222;
+          font-size: .1rem;
         }
         50% {
+          color: rgb(80, 104, 73);
           font-style: oblique;
           font-size: 1.5rem;
-          color: #72F94C;
-          filter: drop-shadow(0.1rem 0 0.3rem #d5e9d9);
         }
         75% {
           font-weight: 800;
           font-stretch: wider;
           font-size: 1.75rem;
-          filter: drop-shadow(0.1rem 0 0.3rem #adc7b1);
         }
         100% {
           color: #72F94C;
           font-kerning: unset;
           font-size: 1.5rem;
-          filter: drop-shadow(0.1rem 0 0.3rem #2ecc40);
         }
       }
       h3 {
@@ -46,7 +44,7 @@
         line-height: 0.5rem;
         font-size: 1.5rem;
         color: #72F94C;
-        animation: pulse ease-in-out 2s 1s;
+        animation: pulse ease-in-out 3s 0.1s;
       }
       nav {
         margin-bottom: 8vh;
