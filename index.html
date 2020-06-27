@@ -13,7 +13,7 @@
       font-size: clamp(12px, 2vw, 16px);
       text-align: center;
       background-color: #444;
-      animation: bkgrnd ease-in-out 3s 0.1s;
+      animation: bkgrnd ease-in-out 3s;
     }
 
     body {
@@ -31,12 +31,20 @@
       }
 
       50% {
-        background-color: #555;
+        background-color: #333;
       }
 
       100% {
         background-color: #444;
       }
+    }
+
+    footer {
+      margin-top: 10vh;
+      line-height: 0.5rem;
+      font-size: 1.5rem;
+      color: #72F94C;
+      animation: pulse ease-in-out 5s 0.1s;
     }
 
     @keyframes pulse {
@@ -47,14 +55,6 @@
       50% {
         color: rgb(121, 134, 117);
       }
-    }
-
-    footer {
-      margin-top: 10vh;
-      line-height: 0.5rem;
-      font-size: 1.5rem;
-      color: #72F94C;
-      animation: pulse ease-in-out 5s 0.1s;
     }
 
     nav {
