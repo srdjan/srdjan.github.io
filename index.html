@@ -17,26 +17,27 @@
     body {
       margin: 0 auto 0;
       height: 100vh;
-      background-color: rgb(41, 48, 39);
-      animation: bkgrnd ease-in-out 3s;
+      background: linear-gradient(-145deg, #54a7ca, #295163, #3c7691, #295163);
+      background-size: 400% 400%;
+      animation: gradient 7s ease;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
     }
 
     h3 {
       border: unset;
-    }
-
-    @keyframes bkgrnd {
-      0% {
-        background-color: #222;
-      }
-
-      50% {
-        background-color: rgba(114, 114, 30, 0.2);
-      }
-
-      100% {
-        background-color: rgb(41, 48, 39);
-      }
     }
 
     footer {
