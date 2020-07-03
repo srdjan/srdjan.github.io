@@ -19,28 +19,6 @@
       height: 100vh;
     }
 
-    h3 {
-      border: unset;
-    }
-
-    footer {
-      margin-top: 10vh;
-      line-height: 0.5rem;
-      font-size: 1.5rem;
-      color: #72F94C;
-      animation: pulse ease-in-out 5s 0.1s;
-    }
-
-    @keyframes pulse {
-      0% {
-        color: #222;
-      }
-
-      50% {
-        color: rgb(121, 134, 117);
-      }
-    }
-
     nav {
       margin-bottom: 8vh;
       display: -webkit-box;
@@ -53,10 +31,18 @@
     .card {
       -webkit-box-flex: 1;
       flex: 1 1 0;
-      -webkit-transition: all 500ms ease-out, background-color 3500ms ease-out;
-      transition: all 500ms ease-out, background-color 3500ms ease-out;
+      -webkit-transition: all 3500ms ease-out, background-color 6500ms ease-out;
+      transition: all 3500ms ease-out, background-color 6500ms ease-out;
     }
 
+    footer {
+      margin-top: 10vh;
+      height: 51vh;
+      line-height: 0.5rem;
+      font-size: 1rem;
+      color: #72F94C;
+      background-image: linear-gradient( #222222, #2aff00);
+    }
   </style>
 </head>
 
