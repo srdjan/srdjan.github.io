@@ -1,61 +1,45 @@
-pre,
-code {
-  font-family: Menlo, Monaco, 'Courier New', monospace;
+html {
+  font-size: clamp(12px, 2vw, 16px);
+  text-align: center;
+  height: auto;
 }
-pre {
-  padding: 0.5rem;
-  line-height: 1.25;
-  overflow-x: scroll;
+
+body {
+  margin: 0 auto 0;
+  min-height: 100%;
+  background-color: #222;
+  color: #fafafa;
+  font-family: 'Courier New';
+  max-width: 48rem;
 }
-@media print {
-  *,
-  *:before,
-  *:after {
-    background: transparent !important;
-    color: #000 !important;
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-  a[href]:after {
-    content: ' (' attr(href) ')';
-  }
-  abbr[title]:after {
-    content: ' (' attr(title) ')';
-  }
-  a[href^='#']:after,
-  a[href^='javascript:']:after {
-    content: '';
-  }
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-  thead {
-    display: table-header-group;
-  }
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-  img {
-    max-width: 100% !important;
-  }
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
+nav {
+  margin-bottom: 8vh;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  height: 4vmin;
 }
+
+article {
+  margin-bottom: 10vh;
+}
+
+.card {
+  -webkit-box-flex: 1;
+  flex: 1 1 0;
+  -webkit-transition: all 3500ms ease-out, background-color 6500ms ease-out;
+  transition: all 3500ms ease-out, background-color 6500ms ease-out;
+}
+
+footer {
+  margin-top: 10vh;
+  height: 10vh;
+  line-height: 0.5rem;
+  font-size: 1rem;
+  background-image: linear-gradient(#222222, #2aff00);
+}
+
 a,
 a:visited {
   color: #01ff70;
@@ -64,25 +48,6 @@ a:hover,
 a:focus,
 a:active {
   color: #2ecc40;
-}
-.retro-no-decoration {
-  text-decoration: none;
-}
-html {
-  font-size: 12px;
-}
-@media screen and (min-width: 32rem) and (max-width: 48rem) {
-  html {
-    font-size: 15px;
-  }
-}
-@media screen and (min-width: 48rem) {
-  html {
-    font-size: 16px;
-  }
-}
-body {
-  line-height: 1.85;
 }
 p,
 .retro-p {
@@ -139,22 +104,7 @@ select,
 textarea {
   max-width: 100%;
 }
-html,
-body {
-  background-color: #222;
-  min-height: 100%;
-}
-html {
-  font-size: 18px;
-}
-body {
-  color: #fafafa;
-  font-family: 'Courier New';
-  line-height: 1.45;
-  margin: 6rem auto 1rem;
-  max-width: 48rem;
-  padding: 0.25rem;
-}
+
 pre {
   background-color: #333;
 }
