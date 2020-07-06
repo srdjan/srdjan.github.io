@@ -1,22 +1,22 @@
-html {
+html, body {
   min-height: 100%;
 }
+
 body {
   display: flex;
   flex-direction: column;
   flex: 1;
-
+  font-size: clamp(14px, 2vw, 16px);
+  font-family: 'Lucida Console', Monaco, monospace;
   text-align: center;
-  font-size: clamp(12px, 2vw, 16px);
   margin: 0 auto 0;
   color: #fafafa;
   background-color: #093640d6;
-  font-family: 'Courier New';
-  min-height: 100%;
   max-width: 48rem;
 }
 nav {
   margin-bottom: 4vh;
+  margin-top: 4vh;
   display: -webkit-box;
   -webkit-box-pack: center;
   justify-content: center;
@@ -25,8 +25,9 @@ nav {
 .head {
   -webkit-box-flex: 1;
   flex: 1 1 0;
-  -webkit-transition: all 3500ms ease-out, background-color 6500ms ease-out;
-  transition: all 3500ms ease-out, background-color 6500ms ease-out;
+  -webkit-transition: background-color 6500ms ease-out;
+  transition: background-color 6500ms ease-out;
+  transition-delay: 1s;
 }
 
 article {
@@ -38,14 +39,15 @@ footer {
   -webkit-box-pack: center;
   justify-content: center;
   height: 4vmin;
-  /* margin-top: calc(32%); */
   flex-shrink: 0;
+  margin-top: 2vh;
 }
 .foot {
   -webkit-box-flex: 1;
   flex: 1 1 0;
-  -webkit-transition: all 3500ms ease-out, background-color 6500ms ease-out;
-  transition: all 3500ms ease-out, background-color 6500ms ease-out;
+  -webkit-transition: background-color 6500ms ease-out;
+  transition: background-color 6500ms ease-out;
+  transition-delay: 1s;
 }
 
 a,
@@ -57,66 +59,7 @@ a:focus,
 a:active {
   color: #2ecc40;
 }
-p,
-.retro-p {
+p {
   font-size: 1rem;
   margin-bottom: 1.3rem;
-}
-h1,
-.retro-h1,
-h2,
-.retro-h2,
-h3,
-.retro-h3,
-h4,
-.retro-h4 {
-  margin: 0.414rem 0 0.5rem;
-  font-weight: inherit;
-  line-height: 1.42;
-}
-h1,
-.retro-h1 {
-  margin-top: 0;
-  font-size: 3.998rem;
-}
-h2,
-.retro-h2 {
-  font-size: 2.827rem;
-}
-h3,
-.retro-h3 {
-  font-size: 1.999rem;
-}
-h4,
-.retro-h4 {
-  font-size: 1.414rem;
-}
-h5,
-.retro-h5 {
-  font-size: 1.121rem;
-}
-h6,
-.retro-h6 {
-  font-size: 0.88rem;
-}
-small,
-.retro-small {
-  font-size: 0.707em;
-}
-img,
-canvas,
-iframe,
-video,
-svg,
-select,
-textarea {
-  max-width: 100%;
-}
-
-pre {
-  background-color: #333;
-}
-blockquote {
-  border-left: 3px solid #01ff70;
-  padding-left: 1rem;
 }
