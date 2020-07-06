@@ -1,41 +1,51 @@
 html {
-  font-size: clamp(12px, 2vw, 16px);
-  text-align: center;
-  height: auto;
-}
-
-body {
-  margin: 0 auto 0;
   min-height: 100%;
-  background-color: #0d0c0cc4;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  text-align: center;
+  font-size: clamp(12px, 2vw, 16px);
+  margin: 0 auto 0;
   color: #fafafa;
+  background-color: #093640d6;
   font-family: 'Courier New';
+  min-height: 100%;
   max-width: 48rem;
 }
 nav {
-  margin-bottom: 8vh;
+  margin-bottom: 4vh;
   display: -webkit-box;
-  display: flex;
   -webkit-box-pack: center;
   justify-content: center;
   height: 4vmin;
 }
-
-article {
-  margin-bottom: 10vh;
-}
-
-.card {
+.head {
   -webkit-box-flex: 1;
   flex: 1 1 0;
   -webkit-transition: all 3500ms ease-out, background-color 6500ms ease-out;
   transition: all 3500ms ease-out, background-color 6500ms ease-out;
 }
 
+article {
+  margin-bottom: 8vh;
+}
+
 footer {
-  height: 5vh;
-  line-height: 0.5rem;
-  font-size: 1rem;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  justify-content: center;
+  height: 4vmin;
+  /* margin-top: calc(32%); */
+  flex-shrink: 0;
+}
+.foot {
+  -webkit-box-flex: 1;
+  flex: 1 1 0;
+  -webkit-transition: all 3500ms ease-out, background-color 6500ms ease-out;
+  transition: all 3500ms ease-out, background-color 6500ms ease-out;
 }
 
 a,
@@ -60,7 +70,7 @@ h3,
 .retro-h3,
 h4,
 .retro-h4 {
-  margin: 1.414rem 0 0.5rem;
+  margin: 0.414rem 0 0.5rem;
   font-weight: inherit;
   line-height: 1.42;
 }
