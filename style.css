@@ -7,7 +7,8 @@ body {
   flex-direction: column;
   flex: 1;
   font-size: clamp(14px, 2vw, 16px);
-  font-family: 'Lucida Console', Monaco, monospace;
+  font-family: 'Courier New';
+  line-height: 1.4rem;
   text-align: center;
   margin: 0 auto 0;
   color: #fafafa;
@@ -50,17 +51,15 @@ footer {
   transition: background-color 6500ms ease-out;
   transition-delay: 4s;
 }
-
 a,
 a:visited {
-  color: #01ff70;
+  color: #fff;
+  border-bottom: 1px dashed #f7f7f7;
+  text-decoration: none;
 }
 a:hover,
 a:focus,
 a:active {
-  color: #2ecc40;
+  color: #01ff70;
 }
-p {
-  font-size: 1rem;
-  margin-bottom: 1.3rem;
-}
+
