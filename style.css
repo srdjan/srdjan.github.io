@@ -3,9 +3,6 @@ html, body {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
   font-size: clamp(14px, 2vw, 16px);
   font-family: 'Courier New';
   line-height: 1.4rem;
