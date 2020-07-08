@@ -49,7 +49,7 @@ footer {
   flex: 1 1 0;
   -webkit-transition: background-color 6500ms ease-out;
   transition: background-color 6500ms ease-out;
-  transition-delay: 4s;
+  transition-delay: 3s;
 }
 a,
 a:visited {
