@@ -47,8 +47,8 @@ footer {
 .foot {
   -webkit-box-flex: 1;
   flex: 1 1 0;
-  -webkit-transition: background-color 6500ms ease-out;
-  transition: background-color 6500ms ease-out;
+  -webkit-transition: background-color 6500ms ease-in;
+  transition: background-color 6500ms ease-in;
   transition-delay: 3s;
 }
 a,
