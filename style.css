@@ -3,7 +3,7 @@ html, body {
 }
 
 body {
-  font-size: clamp(14px, 2vw, 16px);
+  font-size: clamp(12px, 2vw, 16px);
   font-family: 'Courier New';
   line-height: 1.4rem;
   text-align: center;
