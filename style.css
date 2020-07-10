@@ -5,18 +5,18 @@ html, body {
 body {
   font-size: clamp(12px, 2vw, 16px);
   font-family: 'Courier New';
-  line-height: 1.4rem;
+  line-height: 1.1rem;
   text-align: center;
   margin: 0 auto 0;
   color: #fff;
   background-color: #093640d6;
 }
 nav {
-  margin-bottom: 6vh;
+  margin-bottom: 5vh;
   display: -webkit-box;
   -webkit-box-pack: center;
   justify-content: center;
-  height: 6vmin;
+  height: 4vmin;
   width: 100%;
 }
 .head {
@@ -27,7 +27,8 @@ nav {
 }
 
 article {
-  margin-bottom: 4vh;
+  margin-top: 6vh;
+  margin-bottom: 2vh;
 }
 
 footer {
