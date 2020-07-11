@@ -12,12 +12,13 @@ body {
   background-color: #093640d6;
 }
 nav {
-  margin-bottom: 5vh;
   display: -webkit-box;
   -webkit-box-pack: center;
   justify-content: center;
   height: 4vmin;
   width: 100%;
+  margin-bottom: clamp(14vh, 2vw, 18vh);
+
 }
 .head {
   -webkit-box-flex: 1;
