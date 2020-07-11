@@ -17,7 +17,7 @@ nav {
   justify-content: center;
   height: 4vmin;
   width: 100%;
-  margin-bottom: clamp(10vh, 2vw, 14vh);
+  margin-bottom: clamp(3rem, 4vh, 4rem);
 }
 .head {
   -webkit-box-flex: 1;
