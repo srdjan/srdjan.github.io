@@ -9,7 +9,7 @@ body {
   text-align: center;
   margin: 0 auto 0;
   color: #fff;
-  background-color: #093640d6;
+  background-color: #092940d6;
 }
 nav {
   display: -webkit-box;
@@ -22,8 +22,8 @@ nav {
 .head {
   -webkit-box-flex: 1;
   flex: 1 1 0;
-  -webkit-transition: background-color 6500ms ease-out;
-  transition: background-color 6500ms ease-out;
+  -webkit-transition: background-color 3000ms ease-out;
+  transition: background-color 3000ms ease-out;
 }
 
 article {
@@ -44,8 +44,8 @@ footer {
 .foot {
   -webkit-box-flex: 1;
   flex: 1 1 0;
-  -webkit-transition: background-color 6500ms ease-in;
-  transition: background-color 6500ms ease-in;
+  -webkit-transition: background-color 5000ms ease-in;
+  transition: background-color 5000ms ease-in;
 }
 a,
 a:visited {
