@@ -22,8 +22,8 @@ nav {
 .head {
   -webkit-box-flex: 1;
   flex: 1 1 0;
-  -webkit-transition: background-color 3000ms ease-out;
-  transition: background-color 3000ms ease-out;
+  -webkit-transition: background-color 1500ms ease-out;
+  transition: background-color 1500ms ease-out;
 }
 
 article {
@@ -44,8 +44,8 @@ footer {
 .foot {
   -webkit-box-flex: 1;
   flex: 1 1 0;
-  -webkit-transition: background-color 5000ms ease-in;
-  transition: background-color 5000ms ease-in;
+  -webkit-transition: background-color 3000ms ease-in;
+  transition: background-color 3000ms ease-in;
 }
 a,
 a:visited {
