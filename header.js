@@ -8,19 +8,14 @@ const l = i => 100 - ((i + 1) * 100) / length
 
 setTimeout(
   headers.forEach(
-    (c, j) => (c.style.backgroundColor = hsl(h(2.86 + j / 20), 100, l(j)))
+    (c, j) => (c.style.backgroundColor = hsl(h(3), 90, l(j)))
   ),
   250
 )
 
 setTimeout(
   footers.forEach(
-    (c, j) =>
-      (c.style.backgroundColor = hsl(
-        h(2.86 + length - j / 20),
-        100,
-        l(length - j)
-      ))
+    (c, j) => (c.style.backgroundColor = hsl(h(3), 90, l(length - j)))
   ),
-  1750
+  250
 )
