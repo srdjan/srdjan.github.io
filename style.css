@@ -59,3 +59,21 @@ a:active {
   color: #01ff70;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  line-height: 15px;
+  letter-spacing: 0.01em;
+}
+
+li {
+  display: inline-block;
+  margin-right: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-left: 1px dotted;
+  border-right: 1px dotted;
+  border-color: #2bbc8a;
+  vertical-align: middle;
+}
