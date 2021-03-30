@@ -3,9 +3,9 @@ html, body {
 }
 
 body {
-  font-size: clamp(12px, 2vw, 16px);
-  font-family: 'Courier New';
-  line-height: 1.1rem;
+  font-size: clamp(0.35rem, 0.25rem + 6vw, 1.15rem);
+  font-family: system-ui;
+  line-height: 1.55rem;
   text-align: center;
   margin: 0 auto 0;
   color: #fff;
