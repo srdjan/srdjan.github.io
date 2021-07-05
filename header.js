@@ -1,6 +1,6 @@
-let headers = document.querySelectorAll('.head')
-let footers = document.querySelectorAll('.foot')
-let length = headers.length
+const headers = document.querySelectorAll('.head')
+const footers = document.querySelectorAll('.foot')
+const length = headers.length
 
 const hsl = (h, s, l) => `hsl(${h}deg, ${s}%, ${l}%)`
 const h = i => (i * 360) / length
