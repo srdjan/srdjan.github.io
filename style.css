@@ -1,16 +1,19 @@
-html, body {
-  min-height: 100%;
+html {
+  max-width: 70ch;
+  padding: 3em 1em;
+  margin: auto;
 }
 
 body {
+  min-height: 100%;
   font-size: clamp(0.35rem, 3vw, 1.15rem);
   font-family: system-ui;
-  line-height: 1.55rem;
+  line-height: 1.45;
   text-align: center;
-  margin: 0 auto 0;
   color: #fff;
   background-color: #092940d6;
 }
+
 nav {
   display: -webkit-box;
   -webkit-box-pack: center;
@@ -19,6 +22,7 @@ nav {
   width: 100%;
   margin-bottom: 8vmin;
 }
+
 .head {
   -webkit-box-flex: 1;
   flex: 1 1 0;
@@ -31,31 +35,13 @@ article {
   margin-bottom: 2vh;
 }
 
-footer {
-  display: -webkit-box;
-  -webkit-box-pack: center;
-  justify-content: center;
-  height: 4vmin;
-  position: fixed;
-  bottom: 0;
-  left: 0; 
-  width: 100%;
-}
-.foot {
-  -webkit-box-flex: 1;
-  flex: 1 1 0;
-  -webkit-transition: background-color 3000ms;
-  transition: background-color 3000ms;
-}
-a,
-a:visited {
+a, a:visited {
   color: #fff;
   border-bottom: 1px dashed #f7f7f7;
   text-decoration: none;
 }
-a:hover,
-a:focus,
-a:active {
+
+a:hover, a:focus, a:active {
   color: #01ff70;
 }
 
