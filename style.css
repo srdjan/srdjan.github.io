@@ -20,14 +20,14 @@ nav {
   justify-content: center;
   height: 4vmin;
   width: 100%;
-  margin-bottom: 8vmin;
+  margin-bottom: 4vmin;
 }
 
 .head {
   -webkit-box-flex: 1;
   flex: 1 1 0;
-  -webkit-transition: background-color 1500ms;
-  transition: background-color 1500ms;
+  -webkit-transition: background-color 2500ms;
+  transition: background-color 2500ms;
 }
 
 article {

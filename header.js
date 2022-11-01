@@ -17,5 +17,5 @@ setTimeout(
   footers.forEach(
     (c, j) => (c.style.backgroundColor = hsl(h(3), 90, l(length - j)))
   ),
-  250
+  1250
 )
