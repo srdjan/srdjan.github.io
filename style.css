@@ -1,5 +1,5 @@
 :root {
-  --my-green: #316958;
+  --my-green: #438e77;
 }
 
 html {
@@ -45,12 +45,15 @@ article {
 
 a, a:visited {
   color: #fff;
-  border-bottom: 1px dashed #5fcbab;
-  text-decoration: none;
+  -webkit-text-decoration: var(--my-green) solid underline;
+  text-decoration: var(--my-green) solid underline;
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip: ink;
 }
 
 a:hover, a:focus, a:active {
-  color: #dbf7d4;
+  color: var(--my-green);
+  background-color: azure;
 }
 
 ul {
@@ -82,17 +85,11 @@ footer {
 }
 
 .blink {
+  color: #dbf7d4;
   animation: blink-animation 1s steps(5, start) 3;
-  -webkit-animation: blink-animation 1s steps(5, start) 3;
 }
 
 @keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
-}
-
-@-webkit-keyframes blink-animation {
   to {
     visibility: hidden;
   }
