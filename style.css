@@ -1,3 +1,7 @@
+:root {
+  --my-green: #316958;
+}
+
 html {
   max-width: 70ch;
   padding: 3em 1em;
@@ -30,6 +34,10 @@ nav {
   transition: background-color 4000ms;
 }
 
+header {
+  border-color: var(--my-green);
+}
+
 article {
   margin-top: 6vh;
   margin-bottom: 2vh;
@@ -37,12 +45,12 @@ article {
 
 a, a:visited {
   color: #fff;
-  border-bottom: 1px dashed #f7f7f7;
+  border-bottom: 1px dashed var(--my-green);
   text-decoration: none;
 }
 
 a:hover, a:focus, a:active {
-  color: #01ff70;
+  color: var(--my-green);
 }
 
 ul {
@@ -60,7 +68,7 @@ li {
   padding-right: 5px;
   border-left: 1px dotted;
   border-right: 1px dotted;
-  border-color: #2bbc8a;
+  border-color: var(--my-green);
   vertical-align: middle;
 }
 
