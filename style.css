@@ -2,6 +2,7 @@ html {
   max-width: 70ch;
   padding: 3em 1em;
   margin: auto;
+  background-color: #092940d6;
 }
 
 body {
@@ -11,7 +12,6 @@ body {
   line-height: 1.45;
   text-align: center;
   color: #fff;
-  background-color: #092940d6;
 }
 
 nav {
@@ -26,8 +26,8 @@ nav {
 .head {
   -webkit-box-flex: 1;
   flex: 1 1 0;
-  -webkit-transition: background-color 2500ms;
-  transition: background-color 2500ms;
+  -webkit-transition: background-color 4000ms;
+  transition: background-color 4000ms;
 }
 
 article {
