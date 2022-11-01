@@ -7,5 +7,5 @@ const l = i => 100 - ((i + 1) * 100) / headers.length
 setTimeout(
   headers.forEach(
     (c, j) => (c.style.backgroundColor = hsl(h(3), 70, l(j)))
-  ), 3000
+  ), 300
 )

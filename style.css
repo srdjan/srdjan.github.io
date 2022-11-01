@@ -80,3 +80,20 @@ footer {
   text-align: center;
   border: 0;
 }
+
+.blink {
+  animation: blink-animation 1s steps(5, start) 3;
+  -webkit-animation: blink-animation 1s steps(5, start) 3;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
