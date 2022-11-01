@@ -63,3 +63,12 @@ li {
   border-color: #2bbc8a;
   vertical-align: middle;
 }
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  border: 0;
+}
