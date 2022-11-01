@@ -45,12 +45,12 @@ article {
 
 a, a:visited {
   color: #fff;
-  border-bottom: 1px dashed var(--my-green);
+  border-bottom: 1px dashed #5fcbab;
   text-decoration: none;
 }
 
 a:hover, a:focus, a:active {
-  color: var(--my-green);
+  color: #dbf7d4;
 }
 
 ul {
