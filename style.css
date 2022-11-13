@@ -24,7 +24,6 @@ nav {
   justify-content: center;
   height: 4vmin;
   width: 100%;
-  margin-bottom: 4vmin;
 }
 
 .head {
@@ -34,15 +33,9 @@ nav {
   transition: background-color 5000ms;
 }
 
-header {
-  border-color: var(--my-background);
-  margin-top: 6vh;
-  margin-bottom: 6vh;
-}
-
 section {
-  margin-top: 2vh;
-  margin-bottom: 6vh;
+  margin-top: 8vh;
+  margin-bottom: 2vh;
 }
 
 a, a:visited {
