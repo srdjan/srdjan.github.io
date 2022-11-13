@@ -1,5 +1,5 @@
 :root {
-  --my-green: #438e77;
+  --my-background: #4e5587;
 }
 
 html {
@@ -11,11 +11,11 @@ html {
 
 body {
   min-height: 100%;
-  font-size: clamp(1rem, 1.1rem, 1.2rem);
-  font-family: system-ui;
   line-height: 1.45;
   text-align: center;
-  color: #fff;
+  color: whitesmoke;
+  font-family: system-ui;
+  font-size: clamp(1rem, 1.05rem, 1.1rem);
 }
 
 nav {
@@ -35,24 +35,26 @@ nav {
 }
 
 header {
-  border-color: var(--my-green);
+  border-color: var(--my-background);
+  margin-top: 6vh;
+  margin-bottom: 6vh;
 }
 
-article {
-  margin-top: 6vh;
-  margin-bottom: 2vh;
+section {
+  margin-top: 2vh;
+  margin-bottom: 6vh;
 }
 
 a, a:visited {
   color: #fff;
-  -webkit-text-decoration: var(--my-green) solid underline;
-  text-decoration: var(--my-green) solid underline;
+  -webkit-text-decoration: var(--my-background) solid underline;
+  text-decoration: var(--my-background) solid underline;
   -webkit-text-decoration-skip: ink;
   text-decoration-skip: ink;
 }
 
 a:hover, a:focus, a:active {
-  color: var(--my-green);
+  color: var(--my-background);
   background-color: azure;
 }
 
@@ -71,7 +73,7 @@ li {
   padding-right: 5px;
   border-left: 1px dotted;
   border-right: 1px dotted;
-  border-color: var(--my-green);
+  border-color: var(--my-background);
   vertical-align: middle;
 }
 
