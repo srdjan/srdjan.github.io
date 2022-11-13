@@ -30,8 +30,8 @@ nav {
 .head {
   -webkit-box-flex: 1;
   flex: 1 1 0;
-  -webkit-transition: background-color 4000ms;
-  transition: background-color 4000ms;
+  -webkit-transition: background-color 5000ms;
+  transition: background-color 5000ms;
 }
 
 header {
