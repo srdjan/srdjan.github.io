@@ -11,7 +11,7 @@ html {
 
 body {
   min-height: 100%;
-  font-size: clamp(0.35rem, 3vw, 1.15rem);
+  font-size: clamp(1rem, 1.1rem, 1.2rem);
   font-family: system-ui;
   line-height: 1.45;
   text-align: center;
