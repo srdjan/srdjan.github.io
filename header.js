@@ -17,5 +17,14 @@ setTimeout(
   ), 2250
 )
 
-const isMobile = ('ontouchstart' in document.documentElement && navigator.userAgent.match(/Mobi/))
-console.log(`isMobile: ${isMobile}`)
+// const isMobile = ('ontouchstart' in document.documentElement && navigator.userAgent.match(/Mobi/))
+// if (!isMobile) {
+//   console.log('Not mobile device')
+// }
+// else {
+//   target.addEventListener('touchstart', function (e) {
+//     const avatar = document.getElementsByClassName('avatar')
+//     avatar.backgroundColor = '#ffff'
+//     e.preventDefault();
+//   })
+// }
