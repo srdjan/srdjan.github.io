@@ -60,14 +60,15 @@ ul {
 }
 
 li {
-  display: inline-block;
-  margin-right: 15px;
   padding-left: 5px;
   padding-right: 5px;
-  border-left: 1px dotted;
-  border-right: 1px dotted;
   border-color: var(--light-background);
-  vertical-align: middle;
+}
+
+.inside {
+  list-style-position: inside;
+  list-style-type: square;
+  list-style-type: none;
 }
 
 footer {
