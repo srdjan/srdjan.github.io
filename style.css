@@ -81,11 +81,21 @@ footer {
 
 .blink {
   color: #dbf7d4;
-  animation: blink-animation 1s steps(5, start) 3;
+  font-size: larger;
+  animation: blink 1.5s steps(3, start) 1;
 }
-
-@keyframes blink-animation {
+@keyframes blink {
   to {
     visibility: hidden;
+  }
+}
+
+.blink:hover {
+  cursor: none;
+  animation: flip 0.5s 0.1s;
+}
+@keyframes flip {
+  to {
+    font-weight: 900;
   }
 }
