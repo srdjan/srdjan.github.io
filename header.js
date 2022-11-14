@@ -16,3 +16,6 @@ setTimeout(
     (c, j) => (c.style.backgroundColor = hsl(h(3), 90, l(length - j)))
   ), 2250
 )
+
+const isMobile = ('ontouchstart' in document.documentElement && navigator.userAgent.match(/Mobi/))
+console.log(`isMobile: ${isMobile}`)

@@ -48,7 +48,7 @@ a:hover, a:focus, a:active {
   background-color: rgb(59, 105, 105);
 }
 
-.btn {
+.link {
   color: whitesmoke;
   cursor: pointer;
   position: relative;
@@ -56,22 +56,22 @@ a:hover, a:focus, a:active {
   transition: all 0.5s;
 }
 
-.btn:after, .btn:before {
+.link:after, .link:before {
   content: " ";
-  width: 10px;
-  height: 5px;
+  width: 30%;
+  height: 25%;
   position: absolute;
   transition: all 0.5s;
 }
 
-.btn:before {
+.link:before {
   bottom: 1px;
   right: -1px;
-  border-bottom: 2px solid #b2c6b2;
-  border-right: 2px solid #b2c6b2;
+  border-bottom: 2px solid #c9fcc9;
+  border-right: 2px solid #c9fcc9;
 }
 
-.btn:hover:before, .btn:hover:after {
+.link:hover:before, .link:hover:after {
   width: 100%;
   height: 100%;
 }
@@ -83,7 +83,7 @@ ul {
   list-style-type: none;
   line-height: 20px;
   column-count: 2;
-  column-rule: inset 1px rgb(175, 212, 183);
+  column-rule: inset 2px #c9fcc9;
 }
 
 li {
@@ -99,10 +99,10 @@ footer {
   text-align: center;
 }
 
-.blink {
-  color: #dbf7d4;
+.avatar {
+  color: #c9fcc9;
   font-size: larger;
-  animation: blink 1.5s steps(3, start) 1;
+  animation: blink 2s steps(6, start) 1;
 }
 
 @keyframes blink {
@@ -111,7 +111,7 @@ footer {
   }
 }
 
-.blink:hover {
+.avatar:hover {
   cursor: none;
   animation: flip 1s 0.1s;
 }
