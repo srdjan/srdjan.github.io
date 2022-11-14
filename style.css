@@ -1,12 +1,13 @@
 :root {
-  --my-background: #4e5587;
+  --main-background: #092940d6;
+  --light-background: #4e5587;
 }
 
 html {
   max-width: 70ch;
   padding: 3em 1em;
   margin: auto;
-  background-color: #092940d6;
+  background-color: var(--main-background);
 }
 
 body {
@@ -15,14 +16,14 @@ body {
   text-align: center;
   color: whitesmoke;
   font-family: system-ui;
-  font-size: clamp(1rem, 1.05rem, 1.1rem);
+  font-size: clamp(0.8rem, 1.05rem, 1.1rem);
 }
 
 nav {
   display: -webkit-box;
   -webkit-box-pack: center;
   justify-content: center;
-  height: 4vmin;
+  height: 3vmin;
   width: 100%;
 }
 
@@ -34,21 +35,20 @@ nav {
 }
 
 section {
-  margin-top: 8vh;
+  margin-top: 6vh;
   margin-bottom: 2vh;
 }
 
 a, a:visited {
-  color: #fff;
-  -webkit-text-decoration: var(--my-background) solid underline;
-  text-decoration: var(--my-background) solid underline;
+  color: whitesmoke;
+  -webkit-text-decoration: var(--light-background) solid underline;
+  text-decoration: var(--light-background) solid underline;
   -webkit-text-decoration-skip: ink;
   text-decoration-skip: ink;
 }
 
 a:hover, a:focus, a:active {
-  color: var(--my-background);
-  background-color: azure;
+  background-color: rgb(79, 141, 141);
 }
 
 ul {
@@ -66,7 +66,7 @@ li {
   padding-right: 5px;
   border-left: 1px dotted;
   border-right: 1px dotted;
-  border-color: var(--my-background);
+  border-color: var(--light-background);
   vertical-align: middle;
 }
 
@@ -84,6 +84,7 @@ footer {
   font-size: larger;
   animation: blink 1.5s steps(3, start) 1;
 }
+
 @keyframes blink {
   to {
     visibility: hidden;
@@ -94,6 +95,7 @@ footer {
   cursor: none;
   animation: flip 0.5s 0.1s;
 }
+
 @keyframes flip {
   to {
     font-weight: 900;
