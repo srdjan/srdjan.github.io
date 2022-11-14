@@ -52,23 +52,19 @@ a:hover, a:focus, a:active {
 }
 
 ul {
+  max-width: 34rem;
   margin: 0;
   padding: 0;
   list-style-type: none;
-  line-height: 15px;
-  letter-spacing: 0.01em;
+  line-height: 20px;
+  column-count: 2;
+  column-rule: dotted 1px rgb(175, 212, 183);
 }
 
 li {
   padding-left: 5px;
   padding-right: 5px;
   border-color: var(--light-background);
-}
-
-.inside {
-  list-style-position: inside;
-  list-style-type: square;
-  list-style-type: none;
 }
 
 footer {
@@ -94,7 +90,7 @@ footer {
 
 .blink:hover {
   cursor: none;
-  animation: flip 0.5s 0.1s;
+  animation: flip 1s 0.1s;
 }
 
 @keyframes flip {
