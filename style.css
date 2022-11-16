@@ -16,7 +16,7 @@ body {
   text-align: center;
   color: whitesmoke;
   font-family: system-ui;
-  font-size: clamp(0.8rem, 1rem, 1.2rem);
+  font-size: clamp(0.5rem, 1rem, 1.5rem);
 }
 
 nav {
