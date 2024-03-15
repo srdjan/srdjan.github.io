@@ -1,4 +1,5 @@
 :root {
+  font-size: calc(1rem + 0.25vw);
   --main-background: #092940d6;
   --light-background: #4e5587;
 }
@@ -16,7 +17,6 @@ body {
   text-align: center;
   color: whitesmoke;
   font-family: system-ui;
-  font-size: clamp(0.5rem, 1rem, 1.5rem);
 }
 
 nav {
@@ -39,12 +39,15 @@ section {
   margin-bottom: 2vh;
 }
 
-a, a:visited {
+a,
+a:visited {
   text-decoration: none;
   color: whitesmoke;
 }
 
-a:hover, a:focus, a:active {
+a:hover,
+a:focus,
+a:active {
   background-color: rgb(59, 105, 105);
 }
 
@@ -56,7 +59,8 @@ a:hover, a:focus, a:active {
   transition: all 0.5s;
 }
 
-.link:after, .link:before {
+.link:after,
+.link:before {
   content: " ";
   width: 30%;
   height: 25%;
@@ -71,7 +75,8 @@ a:hover, a:focus, a:active {
   border-right: 2px solid #c9fcc9;
 }
 
-.link:hover:before, .link:hover:after {
+.link:hover:before,
+.link:hover:after {
   width: 100%;
   height: 100%;
 }
@@ -97,13 +102,11 @@ footer {
   bottom: 0;
   left: 0;
   color: #c9fcc9;
-  font-size:x-large;
   text-align: center;
 }
 
 .avatar {
   color: #c9fcc9;
-  font-size: larger;
   animation: blink 2s steps(6, start) 1;
 }
 
