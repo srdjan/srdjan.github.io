@@ -1,7 +1,12 @@
 :root {
-  /* font-size: calc(1rem + 0.25vw); */
   --main-background: #092940d6;
   --light-background: #4e5587;
+  --accent-color: #c9fcc9;
+  --text-color: whitesmoke;
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 3rem;
 }
 
 html {
@@ -55,39 +60,37 @@ p,
 }
 
 nav {
-  display: -webkit-box;
-  -webkit-box-pack: center;
+  display: flex;
   justify-content: center;
   height: 3vmin;
   width: 100%;
 }
 
 .head {
-  -webkit-box-flex: 1;
   flex: 1 1 0;
-  -webkit-transition: background-color 5000ms;
   transition: background-color 5000ms;
 }
 
-section {
-  /* margin-top: 6vh;
-  margin-bottom: 2vh; */
-}
 
 a,
 a:visited {
   text-decoration: none;
-  color: whitesmoke;
+  color: var(--text-color);
 }
 
 a:hover,
-a:focus,
 a:active {
   background-color: rgb(59, 105, 105);
 }
 
+a:focus {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+  background-color: rgb(59, 105, 105);
+}
+
 .link {
-  color: whitesmoke;
+  color: var(--text-color);
   cursor: pointer;
   position: relative;
   padding: 2px 2px;
@@ -106,8 +109,8 @@ a:active {
 .link:before {
   bottom: 1px;
   right: -1px;
-  border-bottom: 2px solid #c9fcc9;
-  border-right: 2px solid #c9fcc9;
+  border-bottom: 2px solid var(--accent-color);
+  border-right: 2px solid var(--accent-color);
 }
 
 .link:hover:before,
@@ -123,7 +126,7 @@ ul {
   list-style-type: none;
   line-height: 20px;
   column-count: 2;
-  column-rule: inset 2px #c9fcc9;
+  column-rule: inset 2px var(--accent-color);
 }
 
 li {
@@ -136,12 +139,12 @@ footer {
   position: absolute;
   bottom: 0;
   left: 0;
-  color: #c9fcc9;
+  color: var(--accent-color);
   text-align: center;
 }
 
 .avatar {
-  color: #c9fcc9;
+  color: var(--accent-color);
   animation: blink 2s steps(6, start) 1;
 }
 
@@ -160,4 +163,21 @@ footer {
   to {
     font-weight: 900;
   }
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--accent-color);
+  color: black;
+  padding: 8px;
+  text-decoration: none;
+  transition: top 0.3s;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 6px;
 }
