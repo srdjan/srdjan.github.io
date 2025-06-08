@@ -1,0 +1,8 @@
+{
+  "tasks": {
+    "dev": "deno run --allow-net --allow-read jsr:@std/http/file-server"
+  },
+  "imports": {
+    "@std/assert": "jsr:@std/assert@1"
+  }
+}
