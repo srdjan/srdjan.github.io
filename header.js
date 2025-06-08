@@ -1,22 +1,17 @@
-const headers = document.querySelectorAll('.head');
-const length = headers.length;
+const headers = document.querySelectorAll('.head')
+const length = headers.length
 
-if (length === 0) {
-  console.warn('No header elements found for animation');
-}
+const hsl = (h, s, l) => `hsl(${h}deg, ${s}%, ${l}%)`
+const h = i => (i * 360) / length
+const l = i => 100 - ((i + 1) * 100) / length
 
-const hsl = (h, s, l) => `hsl(${h}deg, ${s}%, ${l}%)`;
-const h = i => (i * 360) / length;
-const l = i => 100 - ((i + 1) * 100) / length;
+setTimeout(
+  headers.forEach(
+    (c, j) => (c.style.backgroundColor = hsl(h(3), 90, l(j)))), 1250
+)
 
-// Use requestAnimationFrame for better performance
-const animateHeaders = () => {
-  headers.forEach((element, index) => {
-    element.style.backgroundColor = hsl(h(3), 90, l(index));
-  });
-};
-
-// Delay animation start
-setTimeout(() => {
-  requestAnimationFrame(animateHeaders);
-}, 1250);
+setTimeout(
+  footers.forEach(
+    (c, j) => (c.style.backgroundColor = hsl(h(3), 90, l(length - j)))
+  ), 2250
+)
