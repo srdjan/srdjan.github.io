@@ -24,38 +24,33 @@ body {
   font-family: system-ui;
 }
 
-h1,
-.fs-h1 {
+h1 {
   font-size: clamp(3rem, 2.7273rem + 1.0909vw, 3.6rem);
 }
 
-h2,
-.fs-h2 {
+h2 {
   font-size: clamp(2.25rem, 2.0455rem + 0.8182vw, 2.7rem);
 }
 
-h3,
-.fs-h3 {
+h3 {
   font-size: clamp(1.875rem, 1.7045rem + 0.6818vw, 2.25rem);
 }
 
-h4,
-.fs-h4 {
+h4 {
   font-size: clamp(1.5rem, 1.3636rem + 0.5455vw, 1.8rem);
 }
 
-h5,
-.fs-h5 {
+h5 {
   font-size: clamp(1.25rem, 1.1364rem + 0.4545vw, 1.5rem);
 }
 
-h6,
-.fs-h6 {
+h6 {
   font-size: clamp(1.125rem, 1.0227rem + 0.4091vw, 1.35rem);
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
 }
 
-p,
-.fs-p {
+p {
   font-size: clamp(0.8333rem, 0.7576rem + 0.303vw, 1rem);
 }
 
@@ -89,6 +84,11 @@ a:focus {
   background-color: rgb(59, 105, 105);
 }
 
+sup {
+  font-size: 0.75rem;
+  color: var(--accent-color);
+}
+
 .link {
   color: var(--text-color);
   cursor: pointer;
@@ -109,8 +109,8 @@ a:focus {
 .link:before {
   bottom: 1px;
   right: -1px;
-  border-bottom: 2px solid var(--accent-color);
-  border-right: 2px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
 }
 
 .link:hover:before,
@@ -137,13 +137,14 @@ li {
 footer {
   width: 100%;
   position: absolute;
-  bottom: 0;
+  bottom: 5vh;
   left: 0;
   color: var(--accent-color);
   text-align: center;
 }
 
 .avatar {
+  font-weight: 400;
   color: var(--accent-color);
   animation: blink 2s steps(6, start) 1;
 }
@@ -156,12 +157,12 @@ footer {
 
 .avatar:hover {
   cursor: none;
-  animation: flip 1s 0.1s;
+  animation: flip 1s 1s;
 }
 
 @keyframes flip {
   to {
-    font-weight: 900;
+    font-weight: 1200;
   }
 }
 
@@ -180,4 +181,10 @@ footer {
 
 .skip-link:focus {
   top: 6px;
+}
+
+/* Even spacing for social links section */
+main section:nth-child(2) a {
+  display: inline-block;
+  margin: 0 var(--spacing-xs);
 }
