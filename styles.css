@@ -66,7 +66,6 @@ nav {
   transition: background-color 5000ms;
 }
 
-
 a,
 a:visited {
   text-decoration: none;
@@ -79,8 +78,8 @@ a:active {
 }
 
 a:focus {
-  outline: 2px solid var(--accent-color);
-  outline-offset: 2px;
+  outline: 1px solid var(--accent-color);
+  outline-offset: 1px;
   background-color: rgb(59, 105, 105);
 }
 
@@ -93,7 +92,6 @@ sup {
   color: var(--text-color);
   cursor: pointer;
   position: relative;
-  padding: 2px 2px;
   transition: all 0.5s;
 }
 
@@ -131,6 +129,7 @@ ul {
 
 li {
   line-height: 22px;
+  padding: 2px 2px;
   border-color: var(--light-background);
 }
 
@@ -184,7 +183,7 @@ footer {
 }
 
 /* Even spacing for social links section */
-main section:nth-child(2) a {
+main section:last-child a {
   display: inline-block;
-  margin: 0 var(--spacing-xs);
+  margin: 0 var(--spacing-sm);
 }
