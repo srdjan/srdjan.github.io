@@ -139,7 +139,6 @@ a:focus-visible {
 .experience-list li {
   display: grid;
   align-items: center;
-  padding-block: var(--spacing-xs);
   line-height: 1.45;
   text-wrap: pretty;
 }
@@ -215,7 +214,7 @@ footer {
 
 @container (min-width: 20rem) {
   .experience-list {
-    gap: var(--spacing-xs);
+    gap: 0;
   }
 
   .experience-list li {
