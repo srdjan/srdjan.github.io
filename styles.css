@@ -89,6 +89,7 @@ h2 {
 section {
   display: grid;
   gap: var(--spacing-sm);
+  container-type: inline-size;
 }
 
 a,
@@ -129,8 +130,7 @@ a:focus-visible {
 
 .experience-list {
   display: grid;
-  gap: var(--spacing-xs);
-  max-width: 34rem;
+  gap: var(--spacing-sm);
   margin: 0 auto;
   padding: 0;
   list-style-type: none;
@@ -138,7 +138,6 @@ a:focus-visible {
 
 .experience-list li {
   display: grid;
-  gap: var(--spacing-xs);
   align-items: center;
   padding-block: var(--spacing-xs);
   line-height: 1.45;
@@ -146,6 +145,11 @@ a:focus-visible {
 }
 
 .employer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-block-size: var(--target-size);
+  padding-inline: var(--spacing-xs);
   color: var(--text-color);
 }
 
@@ -209,10 +213,23 @@ footer {
   }
 }
 
-@media (min-width: 36rem) {
+@container (min-width: 20rem) {
+  .experience-list {
+    gap: var(--spacing-xs);
+  }
+
   .experience-list li {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     column-gap: var(--spacing-sm);
+  }
+
+  .job-role {
+    justify-self: end;
+    text-align: end;
+  }
+
+  .employer {
+    justify-self: start;
   }
 }
 
