@@ -29,16 +29,18 @@
       "https://github.com/srdjan",
       "https://www.linkedin.com/in/ssrdjan/",
       "https://x.com/djidja8",
-      "https://blogo.timek.deno.net"
+      "https://blogo.timok.com"
     ]
   }
   </script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header>
     <span class="avatar" role="img" aria-label="Decorative avatar symbol">⊣˚∆˚⊢</span>
-    <nav>
+    <div class="header-band" aria-hidden="true">
       <div class='head'></div>
       <div class='head'></div>
       <div class='head'></div>
@@ -48,40 +50,57 @@
       <div class='head'></div>
       <div class='head'></div>
       <div class='head'></div>
-    </nav>
+    </div>
   </header>
 
-  <article>
-    <h2>
-      <span>Srdjan Strbanovic</span></br>
-      <h4>Product &amp; Technology Leader</br>
-      NYC Tri-State Area</h4>
-    </h2>
-  </article>
-  <section>
-    <h4>Portals</h4>
-    <a class="link" href="https://github.com/srdjan">@GitHub</a>&emsp;
-    <a class="link" href="https://www.linkedin.com/in/ssrdjan/">@LinkedIn</a>&emsp;
-    <a class="link" href="https://twitter.com/djidja8">@Twitter</a>&emsp;
-    <a class="link" href="https://blogo.timok.com">@Blog</a>
-  </section>
-  <section>
-    <h4>Work experience</h4>
-    <ul class="inside">
-      <li>SVP Architecture</li>
-      <li>Co-Founder/CTO</li>
-      <li>Chief Architect</li>
-      <li>Principal Architect</li>
-      <li>CTO</li>
-      <li>CTO</li>
-      <li><a class="link" href="https://fadv.com">@First Advantage</a></li>
-      <li><a class="link" href="https://klinchit.app">@KlinchIt.app</a></li>
-      <li><a class="link" href="https://lifion.com/">@Lifion by ADP</a></li>
-      <li><a class="link" href="https://www.thoughtworks.com/">@ThoughtWorks</a></li>
-      <li>@Dynatax</li>
-      <li><a class="link" href="https://www.cignium.com/">@Cignium</a></li>
-    </ul>
-  </section>
+  <main id="main">
+    <article class="profile">
+      <h1>Srdjan Strbanovic</h1>
+      <p class="profile-summary">Product &amp; Technology Leader</p>
+      <p class="profile-summary">NYC Tri-State Area</p>
+    </article>
+
+    <section aria-labelledby="portals-heading">
+      <h2 id="portals-heading">Portals</h2>
+      <div class="portals">
+        <a class="link" href="https://github.com/srdjan">@GitHub</a>
+        <a class="link" href="https://www.linkedin.com/in/ssrdjan/">@LinkedIn</a>
+        <a class="link" href="https://twitter.com/djidja8">@Twitter</a>
+        <a class="link" href="https://blogo.timok.com">@Blog</a>
+      </div>
+    </section>
+
+    <section aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Work experience</h2>
+      <ul class="experience-list">
+        <li>
+          <span class="job-role">SVP Architecture</span>
+          <a class="link employer" href="https://fadv.com">@First Advantage</a>
+        </li>
+        <li>
+          <span class="job-role">Co-Founder/CTO</span>
+          <span class="employer">@KlinchIt.app</span>
+        </li>
+        <li>
+          <span class="job-role">Chief Architect</span>
+          <span class="employer">@Lifion by ADP</span>
+        </li>
+        <li>
+          <span class="job-role">Principal Architect</span>
+          <a class="link employer" href="https://www.thoughtworks.com/">@ThoughtWorks</a>
+        </li>
+        <li>
+          <span class="job-role">CTO</span>
+          <span class="employer">@Dynatax</span>
+        </li>
+        <li>
+          <span class="job-role">CTO</span>
+          <a class="link employer" href="https://www.cignium.com/">@Cignium</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+
   <footer>⊣⊢</footer>
 
   <script type="module" src="./header.js"></script>
